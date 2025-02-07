@@ -2,6 +2,7 @@ public class ExcersiseAnswers {
     public static void main(String[] args) {
 
     }
+
     //No; a = JDK 23
 
     //No; b = Java SE is used for developing and deploying portable code foe desktop and server environment. its features include Java Compiler, Java Virtual Machine, Java Run-time Environment Java Development Kit and Class Libraries.
