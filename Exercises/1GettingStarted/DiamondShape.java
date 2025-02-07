@@ -4,7 +4,6 @@ public class DiamondShape {
     public static void main(String[] args)
     {
         // Program to  print a diamond shape
-        Scanner scanner = new Scanner(System.in);
         System.out.println("         I");
         System.out.println("        her");
         System.out.println("       where");
