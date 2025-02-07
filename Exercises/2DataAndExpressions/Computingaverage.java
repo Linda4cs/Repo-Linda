@@ -21,7 +21,5 @@ public class Computingaverage {
 
         System.out.println("Average"+average);
 
-
-
     }
 }

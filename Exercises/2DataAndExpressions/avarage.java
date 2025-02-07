@@ -4,7 +4,8 @@ public class avarage {
         int b =30;
         int c =15;
 
-        int avarage = (double) (a+b+c/3;
+        double avarage = (double) (a+b+c)/3;
 
+        System.out.println("Average" + avarage);
     }
 }
