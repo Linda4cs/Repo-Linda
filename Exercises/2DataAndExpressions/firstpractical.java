@@ -6,6 +6,6 @@ public class firstpractical {
         int y =10;
 
         double total = (x)+y;
-        System.out.println("Total +total");
+        System.out.println("Total" +total);
     }
 }
