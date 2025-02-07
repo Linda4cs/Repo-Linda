@@ -20,5 +20,8 @@ public class Computingaverage {
         double average = (double) (val1+val2+ val3)/3;
 
         System.out.println("Average"+average);
+
+
+
     }
 }
