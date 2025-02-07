@@ -1,16 +1,23 @@
-import javax.lang.model.element.Name;
+import java.util.Scanner;
 
 public class table1 {
     public static void main(String[] args) {
         System.out.println();
 
-        // students information
+        // students grades
 
-        String[] names = {"James", "John", "Jesica", "Miracle"};
-        int[] labMark = new int[] {20, 30, 18, 35};
-        int[] BonusMark = new int[] {5, 9, 4, 10};
-        int[] totalMark = new int[] {4};
+        System.out.println("////////////////////\\\\\\\\\\\\\\\\\\\\");
+        System.out.println("==        Students Points        ==");
+        System.out.println("////////////////////\\\\\\\\\\\\\\\\\\\\");
 
-        int
+        System.out.print("Name       Lab       Bonus       Total");
+        System .out.println();
+        System.out.println("Linda       98       65           86");
+        System.out.println("Charles     98       54           90");
+        System.out.println("Kamsi       87       100          99");
+        System.out.println("Jessica     44       60           82");
+        System.out.println("Blessing    55       77           98");
+        System.out.println();
+
     }
 }
