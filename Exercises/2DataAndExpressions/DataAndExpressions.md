@@ -27,9 +27,6 @@ The requirements for the program are as follows:
 2. Use tab characters to get your columns aligned and you must use the + operator both for addition and string concatenation. 
 3. Make up your own student names and points—the ones shown are just for illustration purposes. You need 5 names. 
 
-
-
-
 ***2) Computing Averages***
 The following program reads three integers and prints the average. Fill in the blanks so that it will work correctly. 
 
@@ -104,4 +101,5 @@ Write an application that prompts for and reads integer representing the length 
 
 
 ***5) Fraction***
-Write an application that prompts and reads the numerator and denominator of a fraction as integers and then prints the decimal equivalent of the fraction.
+`Write an application that prompts and reads the numerator and denominator of a fraction as integers and then prints the decimal equivalent of the fraction.
+`
