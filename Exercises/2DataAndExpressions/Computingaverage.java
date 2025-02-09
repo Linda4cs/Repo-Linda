@@ -17,6 +17,7 @@ public class Computingaverage {
         System.out.println("Enter third value");
         val3 = sc.nextInt();
 
+
         double average = (double) (val1+val2+ val3)/3;
 
         System.out.println("Average"+average);
