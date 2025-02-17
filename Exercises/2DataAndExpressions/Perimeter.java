@@ -11,10 +11,10 @@ public class Perimeter {
         side = scanner.nextInt();
 
         double perimeter = (side)*4;
-        System.out.println("Perimeter"+perimeter);
+        System.out.println("Perimeter: "+perimeter);
 
         double area =  (side)^2;
 
-        System.out.println("Area" +area);
+        System.out.println("Area: " +area);
     }
 }

@@ -6,6 +6,6 @@ public class avarage {
 
         double avarage = (double) (a+b+c)/3;
 
-        System.out.println("Average" + avarage);
+        System.out.println("The Average is" + avarage);
     }
 }

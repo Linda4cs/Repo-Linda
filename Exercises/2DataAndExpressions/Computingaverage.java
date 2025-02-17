@@ -8,19 +8,19 @@ public class Computingaverage {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter fist value");
+        System.out.println("Enter fist value: ");
         val1 = sc.nextInt();
 
-        System.out.println("Enter second value");
+        System.out.println("Enter second value: ");
         val2 = sc.nextInt();
 
-        System.out.println("Enter third value");
+        System.out.println("Enter third value: ");
         val3 = sc.nextInt();
 
 
         double average = (double) (val1+val2+ val3)/3;
 
-        System.out.println("Average"+average);
+        System.out.println("The Average: "+average);
 
     }
 }

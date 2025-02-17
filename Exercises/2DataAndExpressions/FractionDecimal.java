@@ -15,6 +15,6 @@ public class FractionDecimal {
 
         double fraction = (numerator)/denominator;
 
-        System.out.println("FractionDecimal"+fraction);
+        System.out.println("FractionDecimal: "+fraction);
     }
 }

@@ -8,14 +8,14 @@ public class Miles {
         int miles, distance;
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter miles");
+        System.out.println("Enter miles: ");
         miles = sc.nextInt();
 
-        System.out.println("Enter distance");
+        System.out.println("Enter distance: ");
         distance = sc.nextInt();
 
         double kilometre = (double) (miles*distance);
 
-        System.out.println("Kilometer" +kilometre);
+        System.out.println("Kilometer: " +kilometre);
     }
 }

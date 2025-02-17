@@ -9,19 +9,19 @@ public class PunctuationMark {
         String s = scanner.next();
 
         int periodicCount = 0;
-        int commaCount = 1;
+        int commaCount = 0;
         int semicolonCount = 0;
         int colonCount = 0;
         int total = 0;
 
         //iterate through the character
-        for (int i = 0; i < s.length(); i++)
+        for (int i = 1; i < s.length(); i++)
             if (s.charAt(i) == ',')
 
                 periodicCount++;
         total++;
 
-        if (s.charAt(1) == ',')
+        if (s.charAt(0) == ',')
             commaCount++;
         total++;
 
@@ -29,15 +29,15 @@ public class PunctuationMark {
             semicolonCount++;
         total++;
 
-        if (s.charAt(0) == ',' )
+        if (s.charAt(0) == ',')
             colonCount++;
         total++;
 
-        System.out.println("There are " + periodicCount + "periods in theis string");
-        System.out.println("There are " + commaCount + "commas in theis string");
-        System.out.println("There are " + semicolonCount + "semicolons in theis string");
-        System.out.println("There are " + colonCount + "colons in theis string");
-        System.out.println("There are " + total + "totals in theis string");
+        System.out.println("There are " +  periodicCount + " periods in this string");
+        System.out.println("There are " +  commaCount + " commas in this string");
+        System.out.println("There are " +  semicolonCount + " semicolons in this string");
+        System.out.println("There are " +  colonCount + " colons in this string");
+        System.out.println("There are " +  total + " totals in theis string");
 
     }
 }
