@@ -21,7 +21,5 @@ public class StringReverse {
 
         System.out.println("Reversed sentence: " + result.toString().trim());
 
-        scanner.close();
-
     }
 }

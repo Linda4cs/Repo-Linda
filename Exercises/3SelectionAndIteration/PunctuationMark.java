@@ -1,43 +1,24 @@
-import java.util.Scanner;
-
 public class PunctuationMark {
-    public static void main(String[] args)
-    {
-        //program to count punctuation mark
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter a string");
-        String s = scanner.next();
+    public static void main(String[] args) {
 
-        int periodicCount = 0;
-        int commaCount = 0;
-        int semicolonCount = 0;
-        int colonCount = 0;
-        int total = 0;
+        String text = "“Mary had a little lamb, her fleece was as white as snow, and everywhere Mary went, the lamb was sure to go. -that was a nice poem- the end.";
 
-        //iterate through the character
-        for (int i = 1; i < s.length(); i++)
-            if (s.charAt(i) == ',')
+        int punctuationCount = countPunctuationMarks(text);
+        System.out.println("Number of punctuation marks: " + punctuationCount);
+    }
 
-                periodicCount++;
-        total++;
+    public static int countPunctuationMarks(String text) {
+        int count = 0;
 
-        if (s.charAt(0) == ',')
-            commaCount++;
-        total++;
+        for (char c : text.toCharArray()) {
+            if (isPunctuation(c)) {
+                count++;
+            }
+        }
+        return count;
+    }
 
-        if (s.charAt(0) == ',')
-            semicolonCount++;
-        total++;
-
-        if (s.charAt(0) == ',')
-            colonCount++;
-        total++;
-
-        System.out.println("There are " +  periodicCount + " periods in this string");
-        System.out.println("There are " +  commaCount + " commas in this string");
-        System.out.println("There are " +  semicolonCount + " semicolons in this string");
-        System.out.println("There are " +  colonCount + " colons in this string");
-        System.out.println("There are " +  total + " totals in theis string");
-
+    public static boolean isPunctuation(char c) {
+        return c == '.' || c == ',' || c == '!' || c == '?' || c == ';' || c == ':' || c == '-' || c == '\'' || c == '\"';
     }
 }

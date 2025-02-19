@@ -26,11 +26,14 @@ public class Salary {
         rating = scanner.next();
 
         if (rating.equals(("Excellent")))
-            raise = currentSalary * 6.0;
+            raise = currentSalary * 0.06;
+
         else if (rating.equals("Good"))
-            raise = currentSalary * 4.0;
-        if (rating.equals("Poor"))
-            raise = currentSalary * 1.5;
+            raise = currentSalary * 0.04;
+
+        else if (rating.equals("Poor"))
+            raise = currentSalary * 0.015;
+
         else
             System.out.println("False");
 
