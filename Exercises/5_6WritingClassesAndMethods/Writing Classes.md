@@ -29,7 +29,8 @@ Design and implement a class called Bulb that represents a light bulb that can b
  
 ***4) Account***
  
-Modify the Account class from the unit examples so that it also permits an account to be opened with just a name and an account number, assuming an initial balance of zero. Modify the main method of the Transactions class to demonstrate this new capability.
+Modify the Account class from the unit examples so that it also permits an account to be opened with just a name and an account number, 
+assuming an initial balance of zero. Modify the main method of the Transactions class to demonstrate this new capability.
  
 ***5) Cards***
  
