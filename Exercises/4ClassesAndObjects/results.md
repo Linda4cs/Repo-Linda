@@ -73,6 +73,3 @@ SurfaceArea: 452.3893421169302
 Process finished with exit code 0
 
 ---
-
-
-
