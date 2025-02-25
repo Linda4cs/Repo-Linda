@@ -87,6 +87,11 @@ Process finished with exit code 0
 
 ---
 
-5 -
+5 - Dealing 5 random cards:
+Dike of Music
+3 of Chase
+2 of Music
+
+Process finished with exit code 0
 
 ---
