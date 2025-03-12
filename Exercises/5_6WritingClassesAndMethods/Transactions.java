@@ -1,4 +1,4 @@
-public class Transactions {
+gpublic class Transactions {
     public static void main(String[] args) {
         // Account created with name, account number, and initial balance
         Account account1 = new Account("Linda Dike", "24536890", 1500.0);
