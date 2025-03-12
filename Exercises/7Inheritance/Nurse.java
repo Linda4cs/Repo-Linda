@@ -8,6 +8,6 @@ class Nurse extends Employee {
 
     @Override
     public void performService() {
-        System.out.println("Nurse " + getName() + " Emp#" + getEmployeeNumber() + " has " + numberOfPatients + " patients");
+        System.out.println("Nurse: " + getName() + " Emp#" + getEmployeeNumber() + " has " + numberOfPatients + " patients");
     }
 }

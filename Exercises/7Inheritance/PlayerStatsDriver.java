@@ -1,7 +1,7 @@
 public class PlayerStatsDriver {
     public static void main(String[] args) {
         // Creating football player stats
-        FootballStats footballPlayer = new FootballStats("James Brown", "Manchester United", 20, 15, 30);
+        FootballStats footballPlayer = new FootballStats("Linda Dike", "Leeds United", 20, 15, 30);
         footballPlayer.displayInfo();
         footballPlayer.displayStats();
         footballPlayer.scoreGoal(); // Simulate scoring a goal
@@ -18,7 +18,7 @@ public class PlayerStatsDriver {
         System.out.println("\n");
 
         // Creating basketball player stats
-        BasketballStats basketballPlayer = new BasketballStats("Linda Dike", "Leeds United", 3000, 1500, 500);
+        BasketballStats basketballPlayer = new BasketballStats("James Brown", "Manchester United", 3000, 1500, 500);
         basketballPlayer.displayInfo();
         basketballPlayer.displayStats();
         basketballPlayer.scorePoints(3);  // Simulate scoring points

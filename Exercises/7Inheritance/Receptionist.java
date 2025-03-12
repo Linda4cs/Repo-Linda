@@ -8,6 +8,6 @@ class Receptionist extends Employee {
 
     @Override
     public void performService() {
-        System.out.println("Receptionist " + getName() + " Emp#" + getEmployeeNumber() + " has " + numberOfAppointments + " Today's appointment");
+        System.out.println("Receptionist: " + getName() + " Emp#" + getEmployeeNumber() + " has " + numberOfAppointments + " appointment this week");
     }
 }

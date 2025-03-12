@@ -6,7 +6,7 @@
 2 Books               ${\color{blue}-- completed}$\
 3 Bulb   ${\color{blue}-- completed}$\
 4 Account  ${\color{blue}-- completed}$\
-5 Cards ${\color{green}-- todo}$
+5 Cards ${\color{blue}-- completed}$
 
 Please replace ${\color{green}-- todo}$ with ${\color{blue}-- completed}$ once done.
 

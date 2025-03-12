@@ -9,6 +9,6 @@ class Cleaner extends Employee {
 
     @Override
     public void performService() {
-        System.out.println("Cleaner " + getName() + " Emp#" + getEmployeeNumber() + " of " + department + " is sweeping");
+        System.out.println("Cleaner: " + getName() + " Emp#" + getEmployeeNumber() + " of " + department + " is Mobbing");
     }
 }

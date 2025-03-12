@@ -8,6 +8,6 @@ class Doctor extends Employee {
 
     @Override
     public void performService() {
-        System.out.println("Doctor " + getName() + " Emp#" + getEmployeeNumber() + " specializes in " + specialization);
+        System.out.println("Doctor: " + getName() + " Emp#" + getEmployeeNumber() + " specializes in " + specialization);
     }
 }
