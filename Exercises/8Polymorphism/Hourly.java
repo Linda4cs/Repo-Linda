@@ -51,4 +51,3 @@ public class Hourly extends Employee {
       return result;
    }
 }
-
