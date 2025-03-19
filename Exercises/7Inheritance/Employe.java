@@ -1,8 +1,8 @@
-abstract class Employee {
+abstract class Employe {
     protected String employeeName;
     protected int employeeNumber;
 
-    public Employee(String name, int employeeNumber) {
+    public Employe(String name, int employeeNumber) {
         this.employeeName = name;
         this.employeeNumber = employeeNumber;
     }

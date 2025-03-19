@@ -1,5 +1,5 @@
 
-class Cleaner extends Employee {
+class Cleaner extends Employe {
     private String department;
 
     public Cleaner(String name, int employeeNumber, String department) {

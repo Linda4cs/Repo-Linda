@@ -1,4 +1,4 @@
-class Doctor extends Employee {
+class Doctor extends Employe {
     private String specialization;
 
     public Doctor(String name, int employeeNumber, String specialization) {

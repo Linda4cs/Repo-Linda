@@ -1,4 +1,4 @@
-class Receptionist extends Employee {
+class Receptionist extends Employe {
     private int numberOfAppointments;
 
     public Receptionist(String name, int employeeNumber, int numberOfAppointments) {
