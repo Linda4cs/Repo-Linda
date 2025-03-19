@@ -14,6 +14,7 @@ public class Firm
       Staff personnel = new Staff();
 
       personnel.payday();
+      personnel.giveVacation();
 
    }
 }

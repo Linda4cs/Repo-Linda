@@ -15,14 +15,14 @@ public class Staff
    {
       staffList = new StaffMember[6];
 
-      staffList[0] = new Executive("Tony", "123 Main Line", "555-0469", "123-45-6789", 2423.07, 3);
+      staffList[0] = new Executive("Linda", "252 Park Rd", "555-0469", "123-45-6789", 2423.07, 3);
 
-      staffList[1] = new Employee("Paulie", "456 Off Line",
+      staffList[1] = new Employee("Charles", "44 Dewberry Line",
          "555-0101", "987-65-4321", 1246.15, 4);
-      staffList[2] = new Employee("Vito", "789 Off Rocker",
+      staffList[2] = new Employee("Dike", "01 Headingley Campus",
          "555-0000", "010-20-3040", 1169.23, 7);
 
-      staffList[3] = new Hourly("Michael", "678 Fifth Ave.",
+      staffList[3] = new Hourly("Ndidi", "55 Mbano St.",
          "555-0690", "958-47-3625", 10.55, 5);
 
       staffList[4] = new Volunteer("Adrianna", "987 Babe Blvd.",
@@ -57,4 +57,18 @@ public class Staff
 
 
       }
+
+   //-----------------------------------------------------------------
+   //  Gives vacation days to each staff member.
+   //-----------------------------------------------------------------
+   public void giveVacation() {
+      for (int count = 4; count < staffList.length; count++) {
+         if (staffList[count] instanceof Employee) {
+            Employee employee = (Employee) staffList[count];
+            System.out.println(employee.name + " has " + employee.getVacationDays() + " vacation days.");
+            // Give vacation days to the employee
+            employee.takeVacation(3); // Example of giving 5 vacation days
+         }
+      }
+   }
    }

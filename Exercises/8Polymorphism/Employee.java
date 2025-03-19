@@ -31,9 +31,9 @@ public class Employee extends StaffMember
    public void takeVacation(int days) {
       if (vacationDays >= days) {
          vacationDays -= days;
-         System.out.println(name + "took" + "vacation days taken.");
+         System.out.println(name + "took" + days + "vacation days taken.");
       }else {
-         System.out.println("Remaining vacation days: " + vacationDays);
+         System.out.println(name + " dose not have vacation days");
 
          }
    }
@@ -46,6 +46,7 @@ public class Employee extends StaffMember
       String result = super.toString();
 
       result += "\nSocial Security Number: " + socialSecurityNumber;
+      result += "\nVacation Days: " + vacationDays;
 
       return result;
    }

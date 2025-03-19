@@ -14,7 +14,7 @@ public class Hourly extends Employee {
    public Hourly(String eName, String eAddress, String ePhone,
                         String socSecNumber, double rate, int vacationDays) {
 
-      super(eName,eAddress,ePhone,socSecNumber,rate, vacationDays);
+      super(eName,eAddress,ePhone,socSecNumber, rate, vacationDays);
 
       hoursWorked = 0;
       int vacation = 5;
@@ -33,7 +33,7 @@ public class Hourly extends Employee {
    //  Computes and returns the pay for this hourly employee.
    //-----------------------------------------------------------------
    public double pay() {
-      double payment = pay() * hoursWorked;
+      double payment = payRate * hoursWorked;
 
       hoursWorked = 0;
 
@@ -51,3 +51,4 @@ public class Hourly extends Employee {
       return result;
    }
 }
+
