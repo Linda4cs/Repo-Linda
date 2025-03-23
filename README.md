@@ -50,13 +50,13 @@ results for each exercise must also be documented in results.md is the relevant 
 
 **7 Inheritance**\
 **committed by 24th March**\
-1 Hospital            -- to do\
-2 Player Statistics   -- to do
+1 Hospital            -- completed\
+2 Player Statistics   -- completed
 
 **8 Polymorphism**\
 **committed by 31st March**\
-1 Firm Vacation           -- to do\
-2 Password                -- to do
+1 Firm Vacation           -- completed\
+2 Password                -- completed
 
 **9 Further Arrays**\
 **committed by 7th April**\
