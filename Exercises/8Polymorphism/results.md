@@ -55,6 +55,13 @@ Thanks!
 Process finished with exit code 0
 ---
 
-2 -
+2 -Secret before encryption: Linda Dike is my hero!
+Secret after encryption: Spukh'Kprl'pz't'olyv(
+Secret after decryption: Linda Dike is my hero!
+Password after encryption: Excellent Nd
+Password after encryption: Rpryyr{-[q
+Password after decryption: Excellent Nd
+
+Process finished with exit code 0
 
 ---

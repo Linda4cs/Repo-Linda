@@ -35,7 +35,7 @@ public class Secret implements Encryptable
       {
          String masked = "";
          for (int index=0; index < message.length(); index++)
-            masked = masked + (char)(message.charAt(index)+shift);
+            masked = masked + ((char)(message.charAt(index)+shift));
          message = masked;
          encrypted = true;
       }
@@ -49,10 +49,10 @@ public class Secret implements Encryptable
    {
       if (encrypted)
       {
-         String unmasked = "";
+         StringBuilder unmasked = new StringBuilder();
          for (int index=0; index < message.length(); index++)
-            unmasked = unmasked + (char)(message.charAt(index)-shift);
-         message = unmasked;
+            unmasked.append((char)(message.charAt(index)-shift));
+         message = unmasked.toString();
          encrypted = false;
       }
 
@@ -64,6 +64,7 @@ public class Secret implements Encryptable
    //-----------------------------------------------------------------
    public boolean isEncrypted()
    {
+
       return encrypted;
    }
 
@@ -72,6 +73,7 @@ public class Secret implements Encryptable
    //-----------------------------------------------------------------
    public String toString()
    {
+
       return message;
    }
 }

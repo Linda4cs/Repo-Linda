@@ -11,13 +11,22 @@ public class SecretTest
    //-----------------------------------------------------------------
    public static void main(String[] args)
    {
-      Secret hush = new Secret("Wil Wheaton is my hero!");
-      System.out.println(hush);
+      Secret hush = new Secret("Linda Dike is my hero!");
+      System.out.println("Secret before encryption: " + hush );
 
       hush.encrypt();
-      System.out.println(hush);
+      System.out.println("Secret after encryption: " + hush);
 
       hush.decrypt();
-      System.out.println(hush);
+      System.out.println("Secret after decryption: " + hush);
+
+      hush = new Secret("Excellent Nd");
+      System.out.println("Password after encryption: " + hush);
+
+      hush.encrypt();
+      System.out.println("Password after encryption: " + hush);
+
+      hush.decrypt();
+      System.out.println("Password after decryption: " + hush);
    }
 }
