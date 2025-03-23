@@ -3,7 +3,7 @@
 **to be committed by 31st March**
 
 1 Firm Vacation   ${{blue}--Completed}$\
-2 Firm Vacation               ${\color{green}-- todo}$
+2 Firm Vacation   ${{blue}--Completed}$
 
 Please replace ${\color{green}-- todo}$ with ${\color{blue}-- completed}$ once done.
 
