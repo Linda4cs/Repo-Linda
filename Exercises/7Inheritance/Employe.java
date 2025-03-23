@@ -17,3 +17,4 @@ abstract class Employe {
         return employeeNumber;
     }
 }
+
