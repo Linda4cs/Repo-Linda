@@ -60,9 +60,9 @@ results for each exercise must also be documented in results.md is the relevant 
 
 **9 Further Arrays**\
 **committed by 7th April**\
-1 Histogram             -- to do\
-2 L&L Bank Accounts     -- to do\
-3 Post Codes            -- to do\
+1 Histogram             -- completed\
+2 L&L Bank Accounts     -- completed\
+3 Post Codes            -- completed\
 4 Quiz Time             -- to do
 
 **Turtle Graphics Assignment**\
