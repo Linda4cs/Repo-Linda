@@ -2,9 +2,9 @@
 
 **to be committed by 7th April`**
 
-1 Histogram   ${\color{green}-- todo}$\
-2 LL Bank Accounts               ${\color{green}-- todo}$\
-3 Post Codes   ${\color{green}-- todo}$\
+1 Histogram   ${\color{blue}-- completed}$\
+2 LL Bank Accounts ${\color{blue}-- completed}$\
+3 Post Codes   ${\color{blue}-- completed}$\
 4 Quiz Time  ${\color{green}-- todo}$
 
 Please replace ${\color{green}-- todo}$ with ${\color{blue}-- completed}$ once done.
