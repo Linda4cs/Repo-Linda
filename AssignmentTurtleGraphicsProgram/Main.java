@@ -1,5 +1,6 @@
-import java.awt.FlowLayout;
-import javax.swing.JFrame;
+import java.awt.*;
+import javax.swing.*;
+
 import uk.ac.leedsbeckett.oop.LBUGraphics;
 
 class Main extends LBUGraphics {
@@ -19,27 +20,38 @@ class Main extends LBUGraphics {
 
     @Override
     public void processCommand(String command) {
+        String[] splitText;
+        int parameter;
+        splitText = command.split("");
 
-        switch (command) {
+        switch (splitText[0]) {
             case "pendown":
                 setPenState(true);
                 break;
 
-            case "forward":
-                forward(100);
-                break;
-            case "right":
-                right();
-                break;
+            case "move":
+                if (splitText.length > 1) {
+                    try {
+                        parameter = Integer.parseInt(splitText[1]);
+                    } catch (NumberFormatException e) {
+                    }
+                }
 
-            case "left":
-                left();
-                break;
+                    case "forward":
+                        forward(100);
+                        break;
 
-            default:
-                System.out.println("Unknown command: + command");
+                    case "right":
+                        right();
+                        break;
+
+                    case "left":
+                        left();
+                        break;
+
+                    default:
+                        System.out.println("Unknown command: + command");
+                }
+
         }
-
     }
-
-}
