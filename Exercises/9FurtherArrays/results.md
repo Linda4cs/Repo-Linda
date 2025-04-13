@@ -83,6 +83,22 @@ Process finished with exit code 0
 
 ---
 
-4 -
+4 - Question 1: Where is LeedsBeckett University located?
+Your answer: leeds west yorkshire
+Good!
+Question 2: Computer Science is in which Campus ?
+Your answer: headingley
+Good!
+Question 3: How many Generations of computer do we have?
+Your answer: 5
+Good!
+Question 4: What is the the meaning of AI?
+Your answer: artificial inteligence
+Wrong. The answer is: artificial intelligence
+
+Quiz finished!
+Your score: 3/4
+
+Process finished with exit code 0
 
 ---
