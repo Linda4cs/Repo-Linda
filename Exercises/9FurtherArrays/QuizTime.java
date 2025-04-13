@@ -65,7 +65,7 @@ public class QuizTime {
         quiz.add(new Question("Where is LeedsBeckett University located?", "Leeds West Yorkshire"));
         quiz.add(new Question("Computer Science is in which Campus ?", "Headingley"));
         quiz.add(new Question("How many Generations of computer do we have?", "5"));
-        quiz.add(new Question("What is the the meaning of AI?", "artificial intelligence"));
+        quiz.add(new Question("What is the meaning of AI?", "artificial intelligence"));
 
         quiz.askQuestion();
     }
