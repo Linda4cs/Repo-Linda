@@ -63,15 +63,15 @@ results for each exercise must also be documented in results.md is the relevant 
 1 Histogram             -- completed\
 2 L&L Bank Accounts     -- completed\
 3 Post Codes            -- completed\
-4 Quiz Time             -- to do
+4 Quiz Time             -- completed\
 
 **Turtle Graphics Assignment**\
 **committed by 5th May 10am**\
-1 Basic Application           -- to do\
-2 Command Processing          -- to do\
+1 Basic Application           -- completed\
+2 Command Processing          -- completed\
 3 Validating Commands        -- to do\
-4 Loading and Saving          -- to do\
-5 Extending OOPGraphics library    -- to do\
+4 Loading and Saving          -- tcompleted\
+5 Extending OOPGraphics library    -- completed\
 
 ## Notes
 Add your notes and top tips here.
