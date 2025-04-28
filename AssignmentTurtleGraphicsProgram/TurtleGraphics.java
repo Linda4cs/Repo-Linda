@@ -2,15 +2,14 @@ import uk.ac.leedsbeckett.oop.LBUGraphics;
 
 import javax.swing.*;
 import java.awt.*;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.awt.image.BufferedImage;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
 import javax.imageio.ImageIO;
 
 public class TurtleGraphics extends LBUGraphics {
-    ;
 
     public static void main(String[] args) {
         new TurtleGraphics(); //create instance of class that extends LBUGraphics (could be separate class without main), gets out of static context
@@ -28,14 +27,13 @@ public class TurtleGraphics extends LBUGraphics {
     }
 
     @Override
-    public void about () {
+    public void about() {
         super.about();  // Call the original about method to show the default graphic
-        System.out.println("Linda's Turtle");
+        displayMessage("Linda's Turtle");
     }
 
     @Override
-    public void processCommand(String command){
-
+    public void processCommand(String command) {
 
         String[] splitText;
         int parameter;
@@ -48,53 +46,20 @@ public class TurtleGraphics extends LBUGraphics {
                 about(); // Display a simple graphic of the turtle
                 break;
 
+            case "penup":
+                setPenState(false);
+                break;
+
             case "pendown":
                 setPenState(true);
-                displayMessage("pendown");
                 break;
-
-            case "move":
-                if (splitText.length > 1) {
-                    try {
-                        parameter = Integer.parseInt(splitText[1]);
-                    } catch (NumberFormatException e) {
-                        System.out.println("No parameter given");
-                        break;
-                    }
-                    forward(parameter);
-                }
-                break;
-
-            case "save":
-            {
-                try {
-                    FileWriter file = new FileWriter("Program txt");
-                    BufferedWriter output = new BufferedWriter(file);
-                    //output.write(String.valueOf(commandHistory));
-                }catch (IOException e){
-                    System.out.println("File error");
-                }
-            }
-
-            case "reverse":
-                if (splitText.length > 1) {
-                    try {
-                        parameter = Integer.parseInt(splitText[1]);
-                       forward(-parameter); // Move the turtle forward by specified parameter
-                    } catch (NumberFormatException e) {
-                        System.out.println("Invalid command: ");
-
-                        break;
-                    }
-                    break;
-                }
 
             case "left":
                 if (splitText.length > 1) {
                     try {
                         parameter = Integer.parseInt(splitText[1]);
                     } catch (NumberFormatException e) {
-                        System.out.println("invalid command");
+                        System.out.println("No parameter given");
                         break;
                     }
                     left(parameter);
@@ -106,27 +71,47 @@ public class TurtleGraphics extends LBUGraphics {
                     try {
                         parameter = Integer.parseInt(splitText[1]);
                     } catch (NumberFormatException e) {
-                        System.out.println("invalid command");
+                        System.out.println("Wrong parameter");
                         break;
                     }
                     right(parameter);
                     break;
                 }
 
-            case "penup":
-                setPenState(false); // Lift the pen to stop drawing
-                break;
-
-            case "circle":
+            case "move":
                 if (splitText.length > 1) {
                     try {
-                    parameter = Integer.parseInt(splitText[1]);
-                } catch (NumberFormatException e) {
-                    System.out.println("invalid command");
-                    break;
+                        parameter = Integer.parseInt(splitText[1]);
+                    } catch (NumberFormatException e) {
+                        System.out.println("No parameter for move");
+                        break;
+                    }
+                    forward(parameter);
                 }
-                circle(parameter);
                 break;
+
+            case "reverse":
+                 if (splitText.length > 1) {
+                     try {
+                         parameter = Integer.parseInt(splitText[1]);
+                         forward(-parameter); // move turtle forward by a specified parameter
+                     } catch (NumberFormatException e) {
+                         JOptionPane.showMessageDialog(null, "Enter parameter");
+
+                         break;
+                     }
+                     break;
+                 }
+
+            case "save": {
+                try {
+                    FileWriter file = new FileWriter("Program txt");
+                    BufferedWriter output = new BufferedWriter(file);
+                    output.close();
+                } catch (IOException e) {
+                    JOptionPane.showMessageDialog(null, "Error: " + e.getMessage());
+
+                }
             }
 
             case "red":
@@ -145,13 +130,13 @@ public class TurtleGraphics extends LBUGraphics {
                 setPenColour(Color.WHITE); // Set pen color to white
                 break;
 
+            case "reset":
+                reset(); // Reset the canvas to the initial state
+                break;
+
             // Clear and Reset command
             case "clear":
                 clear(); // Clear the canvas, keeping the turtle in the same position
-                break;
-
-            case "reset":
-                reset(); // Reset the canvas to the initial state
                 break;
 
             case "square":
@@ -171,19 +156,21 @@ public class TurtleGraphics extends LBUGraphics {
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
+                break;
+
             case "loadImage":
                 try {
                     loadImage();
                 } catch (IOException e) {
-                    System.out.println("No parameter passed");
+                    System.out.println("Error loading Image: " + e.getMessage());
                 }
                 break;
 
-            case "saveCommand":
+            case "saveCommands":
                 try {
-                    saveCommand();
+                    saveCommands();
                 } catch (IOException e) {
-                    System.out.println("Error saving Image");
+                    System.out.println("Error loading image: " + e.getMessage());
                 }
                 break;
 
@@ -204,97 +191,53 @@ public class TurtleGraphics extends LBUGraphics {
                         int size = Integer.parseInt(splitText[1]);
                         drawTriangle(size);
                     } catch (NumberFormatException e) {
-                        System.out.println("Invalid command: + command");
+                        displayMessage("Invalid command: + command");
                     }
                 }
-                 break;
+                break;
 
             default:
-                System.out.println("Unknown command: + command");
-        }
-    }
-        private void drawSquare(int length) {
-            for (int i = 0; i < 4; i++) {
-                forward(length);
-                right(90);
-            }
-        }
+                displayMessage("Invalid command: " + command);
 
-        private void drawTriangle(int size) {
-            for (int i = 0; i < 3; i++) {
-                forward(size);
-                right(120);
-            }
-        }
-        private void doMove(String command) {
-            if (command.isEmpty()) {
-                System.out.println("Wrong move: CANNOT BE EMPTY. <Enter a valid number>");
-            }
-            else if (command.startsWith("-")){
-                System.out.println("Wrong move: CANNOT BE NEGATIVE. <Please enter a positive number>");
-            }
-            else {
-                try {
-                    forward(command);
-                }catch (Exception e){
-                    System.out.println("Wrong move: MUST BE A NUMBER <Enter required number>");
-                }
-            }
-        }
-
-    private void turnRight(String command) {
-        if (command.isEmpty()) {
-            System.out.println("Wrong move: CANNOT BE EMPTY. <Enter a valid number>");
-        } else if (command.startsWith("-")) {
-            System.out.println("Wrong move: CANNOT BE NEGATIVE. <Please enter a positive number>");
-        } else {
-            try {
-                forward(command);
-            } catch (Exception e) {
-                System.out.println("Wrong move: MUST BE A NUMBER <Enter required number>");
-
-            }
         }
     }
 
-    private void turnLeft(String command) {
-        if (command.isEmpty()) {
-            System.out.println("Wrong move: CANNOT BE EMPTY. <Enter a valid number>");
-        } else if (command.startsWith("-")) {
-            System.out.println("Wrong move: CANNOT BE NEGATIVE. <Please enter a positive number>");
-        } else {
-            try {
-                forward(command);
-            } catch (Exception e) {
-                System.out.println("Wrong move: MUST BE A NUMBER <Enter required number>");
-
-            }
+    private void drawSquare(int length) {
+        for (int i = 0; i < 4; i++) {
+            forward(length);
+            right(90);
         }
     }
 
-        private void saveImage() throws IOException {
+    private void drawTriangle(int size) {
+        for (int i = 0; i < 3; i++) {
+            forward(size);
+            right(120);
+        }
+    }
+
+    private void saveImage() throws IOException {
         BufferedImage image = getBufferedImage();
-        ImageIO.write(image, "png", new  File ("drawing.png"));
+        ImageIO.write(image, "png", new File("drawing.png"));
         displayMessage("Image saved as drawing.png");
 
-        }
-        private void loadImage() throws IOException {
+    }
+    private void loadImage() throws IOException {
         BufferedImage img = ImageIO.read(new File("drawing.png"));
         setBufferedImage(img);
         displayMessage("Image loaded: ");
-        }
+    }
 
-        private void saveCommand() throws IOException {
-            //Files.write(Paths.get("commands.txt"), commandHistory);
-            displayMessage("Command saved to commands.txt");
+    private void saveCommands() throws IOException {
+         //Files.write(Paths.get("commands.txt"), commandHistory);
+        displayMessage("Command saved to commands.txt");
 
-            // Code for a warning dialog
-            int choice = JOptionPane.showConfirmDialog(null,
-                    "Message Unsaved. Do you want to save them?",
-                    "Warning", JOptionPane.YES_NO_OPTION);
-            if (choice == JOptionPane.YES_OPTION) {
-                saveImage(); // Save the image before clearing
-            }
+        // Code for a warning dialog
+        int choice = JOptionPane.showConfirmDialog(null,
+                "Message Unsaved. Do you want to save them?",
+                "Warning", JOptionPane.YES_NO_OPTION);
+        if (choice == JOptionPane.YES_OPTION) {
+            saveImage(); // Save the image before clearing
         }
-
-        }
+    }
+}
