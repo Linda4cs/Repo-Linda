@@ -5,7 +5,7 @@
 1 Histogram   ${\color{blue}-- completed}$\
 2 LL Bank Accounts ${\color{blue}-- completed}$\
 3 Post Codes   ${\color{blue}-- completed}$\
-4 Quiz Time  ${\color{green}-- todo}$
+4 Quiz Time  ${\color{green}-- completed}$
 
 Please replace ${\color{green}-- todo}$ with ${\color{blue}-- completed}$ once done.
 
