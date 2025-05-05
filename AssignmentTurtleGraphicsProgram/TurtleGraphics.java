@@ -80,7 +80,7 @@ public class TurtleGraphics extends LBUGraphics {
                         parameter = Integer.parseInt(splitText[1]);
                         right(parameter);
                     } catch (NumberFormatException e) {
-                        System.out.println("Wrong parameter for right: " + splitText[1]);
+                        System.out.println("Wrong parameter for right: " );
                         break;
                     }
                 } else {
