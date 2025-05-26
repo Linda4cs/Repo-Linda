@@ -1,0 +1,62 @@
+
+ProcessedCommand: about
+ProcessedCommand: pendown
+ProcessedCommand: clear
+ProcessedCommand: move
+Missing parameter for move.
+ProcessedCommand: move 100
+ProcessedCommand: reverse
+ProcessedCommand: reverse 100
+ProcessedCommand: left
+ProcessedCommand: move 100
+ProcessedCommand: right
+ProcessedCommand: move 100
+ProcessedCommand: penup
+ProcessedCommand: right
+ProcessedCommand: move 100
+ProcessedCommand: pendown
+ProcessedCommand: green
+ProcessedCommand: move 100
+ProcessedCommand: blue
+ProcessedCommand: move 100
+ProcessedCommand: white
+ProcessedCommand: move 100
+ProcessedCommand: red move
+ProcessedCommand: red
+ProcessedCommand: move 100
+ProcessedCommand: clear
+ProcessedCommand: reset
+ProcessedCommand: xxxx
+Invalid command: xxxx
+ProcessedCommand: move 100
+ProcessedCommand: move hdgdf
+Non-numeric parameters passed for move. hdgdf
+ProcessedCommand: pendown
+ProcessedCommand: reset
+ProcessedCommand: pendown
+ProcessedCommand: triangle 90
+ProcessedCommand: saveImage
+ProcessedCommand: clear
+ProcessedCommand: loadImage
+ProcessedCommand: clear
+ProcessedCommand: about
+ProcessedCommand: clear
+ProcessedCommand: pendown
+ProcessedCommand: sqaure 90
+Invalid command: sqaure 90
+ProcessedCommand: pendown
+ProcessedCommand: sqaure 90
+Invalid command: sqaure 90
+ProcessedCommand: move 100
+ProcessedCommand: reverse 100
+ProcessedCommand: square 90
+ProcessedCommand: clear
+ProcessedCommand: penwidth 40
+ProcessedCommand: move 40
+ProcessedCommand: clear
+ProcessedCommand: reverse 40
+ProcessedCommand: clesr
+Invalid command: clesr
+ProcessedCommand: pendown
+ProcessedCommand: clear
+ProcessedCommand: triangle 90
